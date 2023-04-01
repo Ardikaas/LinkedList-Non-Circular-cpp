@@ -119,6 +119,7 @@ void menu(){
 
 int main(int argc, char const *argv[])
 {
-  
+  initial();
+  menu();
   return 0;
 }
