@@ -47,6 +47,32 @@ void update(int dt, int entry){
   curr -> data = dt;
 }
 
+void remove(){
+  int var;
+  if (head == NULL){
+    cout << "List is empty" << endl;
+  }else{
+    var = head -> data;
+    del = head;
+    head = head -> next;
+    delete del;
+    cout << "delete success" << endl;
+  }
+}
+
+void display(){
+  curr = head;
+  if (head == NULL){
+    cout << "List is empty" << endl;
+  }else{
+    while (curr != NULL){
+      cout << curr -> data << "->";
+      curr = curr -> next;
+    }
+    cout << "NULL" << endl;
+  }
+}
+
 int main(int argc, char const *argv[])
 {
   
