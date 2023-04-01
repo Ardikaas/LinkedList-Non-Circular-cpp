@@ -73,6 +73,50 @@ void display(){
   }
 }
 
+void menu(){
+  char choice;
+  char repeat;
+  int data;
+  int dt;
+  int entry;
+  do{
+    system("cls");
+    cout << "Menu :" << endl;
+    cout << "1. Input data" << endl;
+    cout << "2. Delete data" << endl;
+    cout << "3. Print data" << endl;
+    cout << "4. Update data" << endl;
+    cout << "5. exit" << endl;
+    cout << "input your choice : ";
+    cin >> choice;
+    switch(choice){
+      case '1' :
+        cout << "Input data : ";
+        cin >> data;
+        input(data);
+        break;
+      case '2':
+        remove();
+        break;
+      case '3':
+        display();
+        break;
+      case '4':
+        cout << "Input new data : ";
+        cin >> dt;
+        cout << "chose list : ";
+        cin >> entry;
+        update(dt, entry);
+        break;
+      case '5':
+        exit (0);
+        break;
+      default:
+        cout << "Please try again";
+    }
+  }while(repeat == 'y' || repeat == 'Y');
+}
+
 int main(int argc, char const *argv[])
 {
   
