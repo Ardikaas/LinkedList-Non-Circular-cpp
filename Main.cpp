@@ -31,6 +31,22 @@ void input(int dt){
   }
 }
 
+void update(int dt, int entry){
+  if (head == NULL){
+    cout << "List is empty" << endl;
+    return;
+  }
+  curr = head;
+  for (int i = 0;i < entry;i++){
+    if (curr == NULL){
+      cout << "Index out of range" << endl;
+      return;
+    }
+    curr = curr -> next;
+  }
+  curr -> data = dt;
+}
+
 int main(int argc, char const *argv[])
 {
   
